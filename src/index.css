@@ -60,3 +60,6 @@ button{
 .changingCardColor{
   background-color: rgba(219, 219, 219, 0.815);
 }
+.active{
+  color: red;
+}

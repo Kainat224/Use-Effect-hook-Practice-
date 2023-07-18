@@ -1,15 +1,11 @@
 import React, {useState, useEffect} from 'react';
+import useTitleCount from './useTitleCount';
 
 const UseEffect1 = () => {
 
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    // console.log('hello world');
-    {
-      (count >= 1) ?  document.title = `Chats (${count})` :  document.title = `Chats`;
-    }
-  }, [count]);
+  useTitleCount(count);
 
   return (
     <div className='designing'>

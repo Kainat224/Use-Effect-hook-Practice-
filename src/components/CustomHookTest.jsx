@@ -1,22 +1,19 @@
 import React, {useState, useEffect} from 'react';
+import useTitleCount from './useTitleCount';
 
 const CustomHookTest = () => {
 
   const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    // console.log('hello world');
-    {
-      (count >= 1) ?  document.title = `Chats (${count})` :  document.title = `Chats`;
-    }
-  }, [count]);
+  //Custom Hook
+  useTitleCount(count);
 
   return (
     <div className='designing'>
       <h1>{count}</h1> 
       <button onClick={
         () => setCount(count + 1)
-      }>Click</button>
+      }>Coustom Hook</button>
     </div>
   )
 }
