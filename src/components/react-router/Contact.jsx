@@ -1,22 +1,25 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
+  const navigate = useNavigate();
+  const goToHome = () => {
+    navigate("/");
+  };
+
   return (
     <>
-    <header>
-      <a href="#">Logo</a>
-      <ul>
-        <li> 
-            <NavLink to="/" >Home</NavLink> 
-        </li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/contact" >Contact</NavLink></li>
-      </ul>
-    </header>
-    <section>You are on Contact Page</section>
+      <section>You are on Contact Page</section>
+      <button onClick={goToHome}>Go to Home Page</button>
+      <button
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
+        Go Back
+      </button>
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

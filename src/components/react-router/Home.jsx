@@ -1,22 +1,12 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import Header from "./Header";
 
 const Home = () => {
   return (
     <>
-    <header>
-      <a href="#">Logo</a>
-      <ul>
-        <li> 
-            <NavLink to="/" >Home</NavLink> 
-        </li>
-        <li><NavLink to="/about">About</NavLink></li>
-        <li><NavLink to="/contact" >Contact</NavLink></li>
-      </ul>
-    </header>
-    <section>You are on Home Page</section>
+      <Header />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
